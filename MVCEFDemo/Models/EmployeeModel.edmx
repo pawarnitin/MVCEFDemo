@@ -11,6 +11,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsSelected" Type="bit" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -53,6 +54,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsSelected" Type="Boolean" />
           <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__Depart__1920BF5C" FromRole="Department" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Employee">
@@ -97,6 +99,7 @@
               <MappingFragment StoreEntitySet="Department">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsSelected" ColumnName="IsSelected" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
